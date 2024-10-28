@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Language() {
     const languages = [
-        {code:'ID', name:'Indonesia', level:'Ahli'},
+        {code:'ID', name:'Indonesia', level:'Mahir'},
         {code:'EN', name:'Inggris', level:'Menengah'},
     ];
   return (

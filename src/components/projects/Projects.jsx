@@ -12,6 +12,7 @@ import image7 from '../../assets/myorders.png';
 import image8 from '../../assets/datapesanan.jpg';
 import image9 from '../../assets/payments.png';
 import image10 from '../../assets/laporan.png';
+import image11 from '../../assets/elk.png';
 
 export default function Projects() {
     const [expanded, setExpanded] = useState(false); // State to manage expansion
@@ -42,10 +43,18 @@ export default function Projects() {
             year: '2024' 
         },
         { 
+            id: 11, 
+            image: image11, 
+            cornerTitle: 'Project ELK Stack', // New corner title
+            title: 'Interface Kibana', 
+            description: 'Saya dan tim magang merancang dan membangun sistem pemantauan log akses dan log error dari sebuah server website menggunakan ELK Stack, dengan Elasticsearch untuk menyimpan dan mengindeks data log, Logstash untuk memproses dan mentransformasikan data log, serta Kibana untuk menampilkan data tersebut melalui visualisasi yang interaktif.', 
+            year: '2023' 
+        },
+        { 
             id: 4, 
             image: image4, 
             cornerTitle: 'Mini Project E-commerce (Individual)', // New corner title
-            title: 'User Checkout (User)', 
+            title: 'Pembelian (Pengguna)', 
             description: 'Halaman checkout memungkinkan pengguna untuk memilih berbagai opsi, seperti warna produk, ukuran produk, dan jumlah produk yang ingin dibeli.  ', 
             year: '2023' 
         },
@@ -53,7 +62,7 @@ export default function Projects() {
             id: 5, 
             image: image5, 
             cornerTitle: 'Mini Project E-commerce (Individual)', // New corner title
-            title: 'Cart Total (User)', 
+            title: 'Keranjang (Pengguna)', 
             description: 'Dalam halaman keranjang, pengguna dapat melihat ringkasan pesanan, seperti total keseluruhan, menghitung biaya ongkos kirim memanfaatkan API dari RajaOngkir, dan menjumlahkan semua total harga produk sebelum melanjutkan ke proses pembayaran.  ', 
             year: '2023' 
         },
@@ -61,7 +70,7 @@ export default function Projects() {
             id: 6, 
             image: image6, 
             cornerTitle: 'Mini Project E-commerce (Individual)', // New corner title
-            title: 'Payments (User)', 
+            title: 'Pembayaran (Pengguna)', 
             description: 'Dalam halaman pembayaran, pengguna akan menemukan formulir yang harus diisi dengan informasi penting. Formulir ini mencakup detail seperti alamat pengiriman, nomor rekening, dan jumlah total yang telah ditransfer ke rekening admin. Di sisi kanan halaman, terdapat informasi mengenai rekening admin yang akan memudahkan pengguna dalam melakukan transfer.', 
             year: '2023' 
         },
@@ -69,7 +78,7 @@ export default function Projects() {
             id: 7, 
             image: image7, 
             cornerTitle: 'Mini Project E-commerce (Individual)', // New corner title
-            title: 'My Orders (User)', 
+            title: 'Pembelian Saya (Pengguna)', 
             description: 'Halaman ini bertujuan untuk menyediakan riwayat pembelian bagi pengguna, sehingga mereka dapat dengan mudah melacak setiap transaksi yang telah dilakukan. Selain itu, halaman ini juga memberikan informasi mengenai status pembelian dan pembayaran, apakah sudah disetujui oleh admin atau belum. Dengan adanya fitur ini, pengguna dapat mengetahui dengan jelas perkembangan pesanan mereka.', 
             year: '2023' 
         },
@@ -94,7 +103,7 @@ export default function Projects() {
             image: image10, 
             cornerTitle: 'Mini Project E-commerce (Individual)', // New corner title
             title: 'Laporan Pesanan (Admin)', 
-            description: '.', 
+            description: 'Laporan Pesanan dibuat untuk admin dapat melihat pendapatan berdasarkan riwayat pembelian produk. Laporan ini juga memudahkan admin dalam melacak transaksi secara lebih detail dan mengelola data penjualan dengan lebih efisien.', 
             year: '2023' 
         },
     ];
@@ -158,16 +167,32 @@ export default function Projects() {
                             </div>
                         </div>
                     </div>
+                    {/* ID 4 */}
+                    <div className='p-4 relative'>
+                        <div className='h-full border-2 border-orange-400 shadow-[0_0_15px_rgba(255,165,0,0.7)] border-opacity-60 rounded-lg overflow-hidden'>
+                            <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white px-6 py-4 rounded-lg text-sm font-medium">
+                                {listProjects[3].cornerTitle}
+                            </div>
+                            <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white px-6 py-4 rounded-lg text-sm font-medium">
+                                {listProjects[3].year}
+                            </div>
+                            <img src={listProjects[3].image} alt={listProjects[3].title} className='w-full h-80 object-contain' />
+                            <div className='p-6'>
+                                <h2 className='tracking-widest text-xl title-font font-medium text-gray-400 mb-1'>{listProjects[3].title}</h2>
+                                <p className='leading-relaxed mb-3'>{listProjects[3].description}</p>
+                            </div>
+                        </div>
+                    </div>
 
                     {/* Group ID 4 to 10 */}
                     <div className='p-4 relative'>
                         <div className='h-full border-2 border-orange-400 shadow-[0_0_15px_rgba(255,165,0,0.7)] border-opacity-60 rounded-lg overflow-hidden'>
                             <h2 className="cursor-pointer" onClick={() => setExpanded(!expanded)}> 
-                                {expanded ? 'Hide Projects' : 'Show More Projects'} 
+                                {expanded ? 'Sembunyikan Proyek' : 'Tampilkan lebih proyek...'} 
                             </h2>
                             {expanded && (
                                 <div className="grid grid-cols-2 gap-4">
-                                    {listProjects.slice(3).map((project) => (
+                                    {listProjects.slice(4).map((project) => (
                                         <div key={project.id} className='h-full border-2 border-orange-400 shadow-[0_0_15px_rgba(255,165,0,0.7)] border-opacity-60 rounded-lg overflow-hidden'>
                                             <div className="absolute top-2 left-2 bg-black bg-opacity-50 text-white px-6 py-4 rounded-lg text-sm font-medium">
                                                 {project.cornerTitle}

@@ -25,7 +25,7 @@ export default function Navbar() {
             </nav>
             <button className='inline-flex items-center py-1 px-7 focus:outline-none text-base text-white mt-4
              md:mt-0 border border-white hover:border-yellow-300 hover:text-gray-900'>
-                <a href='#contact'>Contact me</a>
+                <a href='#contact'>Kontak Saya</a>
             </button>
         </div>
     </header>
