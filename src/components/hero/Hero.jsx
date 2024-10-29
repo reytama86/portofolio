@@ -23,7 +23,7 @@ export default function Hero() {
                      className='absolute top-[350px] left-44 md:top-[-30px] md:left-[450px] transform
                     -translate-x-1/2 -translate-y-1/2 w-20 h-20'/>
                 <h1 className='title-font sm:text-4xl text-4xl mb-4 font-bold text-white'>Hi! Saya Adhimas Rayhan</h1>
-                <p className='mb-8 leading-relaxed'>Saya memiliki pengalaman 3 tahun dalam bidang teknologi informasi, meliputi jaringan, solusi penerapan IoT, serta pengembangan website dan mobile. Minat utama saya pada pengembangan website dengan memanfaatkan teknologi modern seperti Laravel untuk backend guna membangun aplikasi yang skalabel, responsif, dan user-friendly. Saya berfokus pada penerapan praktik terbaik dalam pengembangan web berbasis arsitektur MVC, RESTful API dengan bantuan AJAX dan jquery, serta optimisasi performa aplikasi untuk memberikan solusi yang efisien.    
+                <p className='mb-8 leading-relaxed'>Saya memiliki pengalaman 3 tahun dalam bidang teknologi informasi, meliputi jaringan, solusi penerapan IoT, serta pengembangan website dan mobile. Minat utama saya pada pengembangan website dengan memanfaatkan teknologi modern seperti Laravel untuk backend guna membangun aplikasi yang skalabel, responsif, dan user-friendly. Saya berfokus pada penerapan berbasis arsitektur MVC, RESTful API dengan bantuan AJAX dan jquery, serta optimisasi performa aplikasi untuk memberikan solusi yang efisien.    
                 </p>
                 <div className='flex justify-center'>
                     <a href={CV} download> 
